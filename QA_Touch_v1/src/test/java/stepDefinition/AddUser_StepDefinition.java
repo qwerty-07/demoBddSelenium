@@ -23,7 +23,8 @@ public class AddUser_StepDefinition {
 
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "D:\\Ware\\chromedriver_win32\\chromedriver.exe");
+		String path=System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", path+"\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
